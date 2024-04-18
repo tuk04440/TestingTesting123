@@ -68,5 +68,8 @@ class UniqueCollectionTest {
         initialSizeList = collection.size()
         collection.remove(Item("SampleItem"))
         assert(collection.size() == initialSizeList) {"Item not in list not removed?"}
+
+        collection.remove(Item("Item2"))
+        assert(collection.get(1) != Item("Item2")) {"Item not not removed properly"}
     }
 }

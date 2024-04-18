@@ -41,4 +41,19 @@ class UniqueCollectionTest {
 
         assert(originalSize == 2 && newSize == 0) {"Items not cleared"}
     }
+
+    @Test
+    fun getItem() {
+        collection.addItem(Item("item1"))
+        collection.addItem(Item("Item2"))
+        collection.addItem(Item("item3"))
+
+        assert(collection.get(1) == Item("Item2")) {"Item not retrieved"}
+    }
+
+    //remove from empty list
+    //remove item that is not in list
+    //
+    @Test
+    fun remove
 }

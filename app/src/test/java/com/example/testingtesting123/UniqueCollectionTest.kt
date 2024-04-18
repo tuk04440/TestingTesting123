@@ -53,7 +53,16 @@ class UniqueCollectionTest {
 
     //remove from empty list
     //remove item that is not in list
-    //
+    //remove item in list
     @Test
-    fun remove
+    fun removeItem(){
+        // remove from empty list test
+        val initialSizeList = collection.size()
+        collection.remove(Item("SampleItem"))
+        assert(collection.size() == initialSizeList) {"Item not removed from empty list: trivial"}
+
+        collection.addItem(Item("item1"))
+        collection.addItem(Item("Item2"))
+        collection.addItem(Item("item3"))
+    }
 }
